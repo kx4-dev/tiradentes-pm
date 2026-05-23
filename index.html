@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM Tiradente RP - Sistema Oficial</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#0b1120;
+    color:white;
+    padding:20px;
+}
+
+.container{
+    max-width:1500px;
+    margin:auto;
+}
+
+.topo{
+    display:flex;
+    align-items:center;
+    gap:20px;
+    margin-bottom:30px;
+}
+
+.logo{
+    width:100px;
+    height:100px;
+    border-radius:20px;
+    background:#111827;
+    object-fit:cover;
+    padding:10px;
+    border:2px solid #1f2937;
+}
+
+.titulo h1{
+    font-size:38px;
+    font-weight:700;
+}
+
+.titulo p{
+    color:#9ca3af;
+    margin-top:5px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:25px;
+}
+
+.card{
+    background:#111827;
+    border:1px solid #1f2937;
+    border-radius:20px;
+    padding:25px;
+    box-shadow:0 0 25px rgba(0,0,0,.5);
+}
+
+.card h2{
+    margin-bottom:20px;
+}
+
+.lista{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    max-height:700px;
+    overflow:auto;
+    padding-right:5px;
+}
+
+.lista::-webkit-scrollbar{
+    width:5px;
+}
+
+.lista::-webkit-scrollbar-thumb{
+    background:#2563eb;
+    border-radius:999px;
+}
+
+.item{
+    background:#0f172a;
+    border:1px solid #1e293b;
+    border-radius:14px;
+    padding:14px;
+    transition:.2s;
+}
+
+.item:hover{
+    border-color:#2563eb;
+}
+
+.item label{
+    cursor:pointer;
+    display:block;
+    width:100%;
+}
+
+.item input{
+    margin-right:10px;
+    transform:scale(1.2);
+}
+
+button{
+    width:100%;
+    padding:15px;
+    border:none;
+    border-radius:14px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.2s;
+    margin-top:20px;
+    background:#2563eb;
+    color:white;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.resultado{
+    background:#0f172a;
+    border:1px solid #1e293b;
+    border-radius:15px;
+    padding:20px;
+    line-height:1.8;
+    white-space:pre-line;
+    min-height:350px;
+}
+
+.info{
+    margin-top:20px;
+    background:#0f172a;
+    border:1px solid #1e293b;
+    border-radius:15px;
+    padding:20px;
+}
+
+.info h3{
+    margin-bottom:10px;
+}
+
+.info ul{
+    margin-left:20px;
+    line-height:1.9;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#6b7280;
+}
+
+@media(max-width:1000px){
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.titulo h1{
+    font-size:28px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="topo">
+
+<img src="logo.png" class="logo">
+
+<div class="titulo">
+<h1>PM Tiradente RP</h1>
+<p>Sistema Oficial de Multas e Infrações</p>
+</div>
+
+</div>
+
+<div class="grid">
+
+<div class="card">
+
+<h2>🚓 Multas e Infrações</h2>
+
+<div class="lista">
+
+<div class="item"><label><input type="checkbox" value="880.41|7|🚫 Dirigir sem CNH">🚫 Dirigir sem CNH</label></div>
+
+<div class="item"><label><input type="checkbox" value="2934.70|7|🍺 Dirigir alcoolizado">🍺 Dirigir alcoolizado</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|📱 Usar celular dirigindo">📱 Usar celular dirigindo</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚦 Avançar sinal vermelho">🚦 Avançar sinal vermelho</label></div>
+
+<div class="item"><label><input type="checkbox" value="2934.70|7|🚧 Direção perigosa">🚧 Direção perigosa</label></div>
+
+<div class="item"><label><input type="checkbox" value="2934.70|7|💥 Arrancada brusca">💥 Arrancada brusca</label></div>
+
+<div class="item"><label><input type="checkbox" value="2934.70|7|🛞 Drift / cavalo de pau">🛞 Drift / cavalo de pau</label></div>
+
+<div class="item"><label><input type="checkbox" value="2934.70|7|🏁 Participar de racha">🏁 Participar de racha</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚔 Fugir de abordagem">🚔 Fugir de abordagem</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚨 Desobedecer ordem policial">🚨 Desobedecer ordem policial</label></div>
+
+<div class="item"><label><input type="checkbox" value="2934.70|7|📸 RADAR PRF">📸 RADAR PRF</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|🚗 Sem cinto">🚗 Sem cinto</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🪖 Sem capacete">🪖 Sem capacete</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🪟 Viseira levantada">🪟 Viseira levantada</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🩴 Pilotar de chinelo">🩴 Pilotar de chinelo</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚫 Veículo sem placa">🚫 Veículo sem placa</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|📛 Placa encoberta/torta">📛 Placa encoberta/torta</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|💡 Farol queimado">💡 Farol queimado</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|🔦 Xenon irregular">🔦 Xenon irregular</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|🌫️ Insulfilm irregular">🌫️ Insulfilm irregular</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|🔊 Escapamento barulhento">🔊 Escapamento barulhento</label></div>
+
+<div class="item"><label><input type="checkbox" value="180.16|4|📢 Buzina excessiva">📢 Buzina excessiva</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🔁 Pisca ligado sem motivo">🔁 Pisca ligado sem motivo</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🚨 Farol alto indevido">🚨 Farol alto indevido</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|🛞 Pneu careca">🛞 Pneu careca</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|🔧 Veículo mal conservado">🔧 Veículo mal conservado</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🚫 Sem retrovisor">🚫 Sem retrovisor</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|👥 Excesso de passageiros">👥 Excesso de passageiros</label></div>
+
+<div class="item"><label><input type="checkbox" value="880.41|7|🚷 Subir na calçada">🚷 Subir na calçada</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚍 Ultrapassagem proibida">🚍 Ultrapassagem proibida</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|↩️ Andar na contramão">↩️ Andar na contramão</label></div>
+
+<div class="item"><label><input type="checkbox" value="880.41|7|🚧 Trafegar no acostamento">🚧 Trafegar no acostamento</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚑 Não dar passagem para emergência">🚑 Não dar passagem para emergência</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🅿️ Estacionar proibido">🅿️ Estacionar proibido</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🛑 Parar sobre faixa">🛑 Parar sobre faixa</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚫 Sem licenciamento">🚫 Sem licenciamento</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🪪 Documento vencido">🪪 Documento vencido</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚨 Giroflex/sirene ilegal">🚨 Giroflex/sirene ilegal</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🔫 Porta-malas aberto">🔫 Porta-malas aberto</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|🪫 Som extremamente alto">🪫 Som extremamente alto</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|⛽ Veículo abandonado/depenado">⛽ Veículo abandonado/depenado</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🚬 Fumar pilotando moto">🚬 Fumar pilotando moto</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🚪 Porta aberta em movimento">🚪 Porta aberta em movimento</label></div>
+
+<div class="item"><label><input type="checkbox" value="293.47|7|🚶 Não dar preferência ao pedestre">🚶 Não dar preferência ao pedestre</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🛣️ Parar no acostamento sem motivo">🛣️ Parar no acostamento sem motivo</label></div>
+
+<div class="item"><label><input type="checkbox" value="195.23|5|🚦 Bloquear cruzamento">🚦 Bloquear cruzamento</label></div>
+
+<div class="item"><label><input type="checkbox" value="130.16|4|🪞 Retrovisor quebrado">🪞 Retrovisor quebrado</label></div>
+
+</div>
+
+<button onclick="calcular()">
+🚓 Calcular
+</button>
+
+</div>
+
+<div class="card">
+
+<h2>📋 Resultado</h2>
+
+<div class="resultado" id="resultado">
+💬 Infrações cometidas:
+
+Nenhuma infração selecionada.
+</div>
+
+<div class="info">
+
+<h3>📊 Sistema de Pontos</h3>
+
+<ul>
+<li>⚠️ 10 pontos → Advertência</li>
+<li>💸 15 pontos → Multa extra de R$200</li>
+<li>🚫 20 pontos → Suspensão da CNH</li>
+<li>❌ 25 pontos → Perda da CNH</li>
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer">
+PM Tiradente RP © 2026
+</div>
+
+</div>
+
+<script>
+
+function calcular(){
+
+const checks = document.querySelectorAll('input[type="checkbox"]:checked');
+
+let total = 0;
+let pontos = 0;
+
+let texto = "";
+
+texto += "💬 Infrações cometidas:\n\n";
+
+checks.forEach(c => {
+
+const dados = c.value.split("|");
+
+const valor = parseFloat(dados[0]);
+const pts = parseInt(dados[1]);
+const infra = dados[2];
+
+total += valor;
+pontos += pts;
+
+texto += `${infra} → R$ ${valor.toFixed(2)} | ${pts} pontos\n`;
+
+});
+
+texto += "\n━━━━━━━━━━━━━━━━━━";
+
+texto += `\n\n✅ Total da multa: R$ ${total.toFixed(2)}`;
+texto += `\n📊 Total de pontos: ${pontos} pontos`;
+
+if(pontos >= 25){
+
+texto += `\n\n❌ Punição aplicada: Perda da CNH`;
+
+}
+else if(pontos >= 20){
+
+texto += `\n\n🚫 Punição aplicada: Suspensão da CNH`;
+
+}
+else if(pontos >= 15){
+
+texto += `\n\n💸 Punição aplicada: Multa extra de R$200`;
+
+}
+else if(pontos >= 10){
+
+texto += `\n\n⚠️ Punição aplicada: Advertência`;
+
+}
+else{
+
+texto += `\n\nℹ️ Sem punição adicional.`;
+
+}
+
+document.getElementById("resultado").innerText = texto;
+
+}
+
+</script>
+
+</body>
+</html>
